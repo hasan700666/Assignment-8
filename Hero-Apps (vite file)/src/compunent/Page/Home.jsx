@@ -50,6 +50,13 @@ const Home = () => {
         </div>
       </div>
       <div className="data-div"></div>
+      <div>
+        <div className="text-5xl font-bold text-center my-5">Trending Apps</div>
+        <div className="text-2xl text-center my-5">
+          Explore All Trending Apps on the Market developed by us
+        </div>
+        <div></div>
+      </div>
     </div>
   );
 };
