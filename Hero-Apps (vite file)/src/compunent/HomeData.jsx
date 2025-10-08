@@ -1,5 +1,5 @@
 import React from "react";
-import IMG from "../../assets/demo-app (1).webp";
+import IMG from "../assets/demo-app (1).webp";
 
 const HomeData = ({ data }) => {
   const comeData = data;

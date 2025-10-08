@@ -1,7 +1,7 @@
 import React from "react";
 import MovileIMG from "../../assets/hero.png";
 import { useLoaderData } from "react-router";
-import HomeData from "./HomeData";
+import HomeData from "../HomeData";
 
 const Home = () => {
   const data = useLoaderData();
