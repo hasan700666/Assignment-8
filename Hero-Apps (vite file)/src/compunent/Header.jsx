@@ -1,12 +1,19 @@
 import React from "react";
 import logo from "../assets/logo.png";
+import { NavLink } from "react-router";
 
 const Header = () => {
   const list = (
     <>
-      <li className="m-2 font-bold">Home</li>
-      <li className="m-2 font-bold">Apps</li>
-      <li className="m-2 font-bold">Installation</li>
+      <NavLink to="/">
+        <li className="m-2 font-bold">Home</li>
+      </NavLink>
+      <NavLink to="AllApplication">
+        <li className="m-2 font-bold">Apps</li>
+      </NavLink>
+      <NavLink to="Installation">
+        <li className="m-2 font-bold">Installation</li>
+      </NavLink>
     </>
   );
 

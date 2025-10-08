@@ -14,7 +14,7 @@ const Installation = () => {
           <p className="mx-10">1 Apps Found</p>
           <button className="mx-10">Sort By Size</button>
         </div>
-        <div className="flex justify-between gap-7 py-5 mx-10">
+        <div className="flex justify-between gap-7 py-5 mx-10 items-center">
           <div className="flex items-center">
             <div className="mx-9">IMG</div>
             <div>

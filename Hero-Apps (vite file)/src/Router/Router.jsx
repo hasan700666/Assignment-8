@@ -4,6 +4,7 @@ import Root from "../Root/Root";
 import Error from "../compunent/Error";
 import AllApplications from "../compunent/Page/AllApplications";
 import Installation from "../compunent/Page/Installation";
+import AboutApp from "../compunent/AboutApp";
 
 async function TopAppDataLoader() {
   const data = await fetch("TopAppData.json");
@@ -37,6 +38,16 @@ export const router = createBrowserRouter([
       {
         path: "Installation",
         Component: Installation,
+      },
+      {
+        path: "about/:id",
+        loader: () => fetch("../../public/AllAppData.json"),
+        Component: AboutApp,
+      },
+      {
+        path: "AllApplication/about/:id",
+        loader: () => fetch("../../public/AllAppData.json"),
+        Component: AboutApp,
       },
     ],
   },
