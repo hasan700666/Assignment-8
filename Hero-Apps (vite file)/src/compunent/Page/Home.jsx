@@ -1,7 +1,57 @@
 import React from "react";
+import MovileIMG from "../../assets/hero.png";
 
 const Home = () => {
-  return <div>I am home</div>;
+  return (
+    <div>
+      <div className="text-5xl font-bold text-center mt-10">
+        We Build <br />
+        <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#632EE3] to-[#9F62F2] font-extrabold">
+          Productive{" "}
+        </span>
+        Apps
+      </div>
+      <div className="text-1xl  text-center m-7">
+        At HERO.IO , we craft innovative apps designed to make everyday life
+        simpler, smarter, and more exciting. <br />
+        Our goal is to turn your ideas into digital experiences that truly make
+        an impact.
+      </div>
+      <div className="flex justify-center items-center gap-6 mb-30">
+        <button className="btn">Google Play</button>
+        <button className="btn">App Store</button>
+      </div>
+      <div className="flex justify-center items-center">
+        <img src={MovileIMG} alt="" />
+      </div>
+      <div className="my-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-neutral-50">
+        <div className="text-3xl text-center py-7">
+          Trusted by Millions, Built for You
+        </div>
+        <div className="flex justify-center ">
+          <div className="stats shadow gap-20 pb-7 text-neutral-50">
+            <div className="flex flex-col justify-center items-center">
+              <div className="">Total Downloads</div>
+              <div className="stat-value ">29.6M</div>
+              <div className="">21% more than last month</div>
+            </div>
+
+            <div className="flex flex-col justify-center items-center">
+              <div className="">Total Reviews</div>
+              <div className="stat-value ">906K</div>
+              <div className="">46% more than last month</div>
+            </div>
+            <div className="flex flex-col justify-center items-center">
+              <div className="">Active Apps</div>
+              <div className="stat-value ">132+</div>
+              <div className="">31 more will Launch</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="data-div"></div>
+    </div>
+  );
 };
 
 export default Home;
