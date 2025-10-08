@@ -1,7 +1,13 @@
 import React from "react";
 import MovileIMG from "../../assets/hero.png";
+import { useLoaderData } from "react-router";
+import HomeData from "./HomeData";
 
 const Home = () => {
+  const data = useLoaderData();
+
+  //console.log(data);
+
   return (
     <div>
       <div className="text-5xl font-bold text-center mt-10">
@@ -55,7 +61,11 @@ const Home = () => {
         <div className="text-2xl text-center my-5">
           Explore All Trending Apps on the Market developed by us
         </div>
-        <div></div>
+        <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-5">
+          {data.map((data) => (
+            <HomeData data={data}></HomeData>
+          ))}
+        </div>
       </div>
     </div>
   );
