@@ -1,5 +1,6 @@
 import React from "react";
 import { useLoaderData, useParams } from "react-router";
+import { addData } from "./utility/LS";
 
 const AboutApp = () => {
   const data = useLoaderData();
@@ -13,6 +14,10 @@ const AboutApp = () => {
   const findData = data.find((data) => id == data.id);
 
   console.log(findData);
+
+  const LS = (id) => {
+    addData(id);
+  };
 
   return (
     <div>
@@ -29,7 +34,9 @@ const AboutApp = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button className="btn btn-primary">Get Started</button>
+            <button onClick={() => LS(id)} className="btn btn-primary">
+              Install Now the game
+            </button>
           </div>
         </div>
       </div>

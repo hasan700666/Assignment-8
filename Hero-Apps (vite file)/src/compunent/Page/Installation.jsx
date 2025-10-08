@@ -1,6 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
+import { useLoaderData } from "react-router";
+import { gatAllData } from "../utility/LS";
+import InstallationApp from "../InstallationApp";
 
 const Installation = () => {
+  const data = useLoaderData();
+
+  const [InstalldList, SetInstalldList] = useState([]);
+
+  useEffect(() => {
+    const LSdata = gatAllData();
+
+    const toNumber = LSdata.map((data) => parseInt(data));
+
+    const findTheData = data.filter((data) => toNumber.includes(data.id));
+    SetInstalldList(findTheData);
+    console.log(findTheData);
+  }, []);
+
   return (
     <div>
       <div className="text-5xl font-bold text-center my-5">
@@ -9,26 +26,14 @@ const Installation = () => {
       <div className="text-2xl text-center my-5">
         Explore All Trending Apps on the Market developed by us
       </div>
+      <div className="flex justify-between items-center">
+        <p className="mx-10">{InstalldList.length} Apps Found</p>
+        <button className="mx-10">Sort By Size</button>
+      </div>
       <div>
-        <div className="flex justify-between items-center">
-          <p className="mx-10">1 Apps Found</p>
-          <button className="mx-10">Sort By Size</button>
-        </div>
-        <div className="flex justify-between gap-7 py-5 mx-10 items-center">
-          <div className="flex items-center">
-            <div className="mx-9">IMG</div>
-            <div>
-              <div>Forest: Focus for Productivity</div>
-              <div className="flex justify-center items-center gap-15">
-                <div>ratting</div>
-                <div>star</div>
-              </div>
-            </div>
-          </div>
-          <div className="flex justify-end">
-            <div>Uninstall</div>
-          </div>
-        </div>
+        {InstalldList.map((data) => (
+          <InstallationApp data={data}></InstallationApp>
+        ))}
       </div>
     </div>
   );
