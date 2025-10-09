@@ -21,4 +21,18 @@ const addData = (id) => {
   }
 };
 
-export { addData, gatAllData };
+const removeItem = (id) => {
+  const AllData = localStorage.getItem("InstallList");
+
+  const partsAllData = JSON.parse(AllData);
+
+  const intoNumber = partsAllData.map((data) => parseInt(data));
+
+  const filterDATA = intoNumber.filter((data) => data != id);
+
+  const toStringify = JSON.stringify(filterDATA);
+
+  localStorage.setItem("InstallList", toStringify);
+};
+
+export { addData, gatAllData, removeItem };

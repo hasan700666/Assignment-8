@@ -27,7 +27,9 @@ const Installation = () => {
         Explore All Trending Apps on the Market developed by us
       </div>
       <div className="flex justify-between items-center">
-        <p className="mx-10">{InstalldList.length} Apps Found</p>
+        <p className="mx-10">
+          <span id="AppNumber">{InstalldList.length}</span> Apps Found
+        </p>
         <button className="mx-10">Sort By Size</button>
       </div>
       <div>
