@@ -13,11 +13,13 @@ const addData = (id) => {
   const data = gatAllData();
 
   if (data.includes(id)) {
-    alert("data asay bay");
+    //alert("data asay bay");
+    return false;
   } else {
     data.push(id);
     const newData = JSON.stringify(data);
     localStorage.setItem("InstallList", newData);
+    return true;
   }
 };
 

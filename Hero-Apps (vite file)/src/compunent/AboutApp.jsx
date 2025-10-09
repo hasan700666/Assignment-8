@@ -1,23 +1,57 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { addData } from "./utility/LS";
 
 const AboutApp = () => {
   const data = useLoaderData();
 
-  console.log(data);
+  //console.log(data);
 
   const { id } = useParams();
 
-  console.log(id);
+  //console.log(id);
 
-  const findData = data.find((data) => id == data.id);
+  const findData = data.find((data) => id == data.id); //the data
 
-  console.log(findData);
+  //console.log(findData);
+
+  const [state, SetState] = useState();
+
+  const gatAllData1 = () => {
+    const AllData = localStorage.getItem("InstallList");
+
+    if (AllData) {
+      const AllDataToPars = JSON.parse(AllData);
+      return AllDataToPars;
+    } else {
+      return [];
+    }
+  };
+
+  useEffect(() => {
+    const value = gatAllData1();
+
+    if (value.includes(id)) {
+      SetState(false);
+    } else {
+      SetState(true);
+    }
+  }, []);
 
   const LS = (id) => {
-    addData(id);
+    let TOF = addData(id);
+
+    console.log(TOF);
+
+    if (TOF === true) {
+      console.log("adding to instole");
+      SetState(false);
+    } else {
+      console.log("add into LS");
+    }
   };
+
+  console.log(state);
 
   return (
     <div>
@@ -34,7 +68,10 @@ const AboutApp = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <button onClick={() => LS(id)} className="btn btn-primary">
+            <button
+              onClick={() => LS(id)}
+              className={state ? "btn btn-primary" : "disabled"}
+            >
               Install Now the game
             </button>
           </div>
