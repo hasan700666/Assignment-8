@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { Suspense, useState } from "react";
 import { useLoaderData } from "react-router";
 import AllApplicationData from "../AllApplicationData";
 import AppNotFound from "../AppNotFound";
@@ -8,23 +8,31 @@ const AllApplications = () => {
 
   const [value, SetValue] = useState(data);
 
+  const [loding, setLoding] = useState(false);
+
   //console.log(data);
 
   const hendleChange = (e) => {
+    setLoding(true);
+
     const kye = e.target.value.toLowerCase();
 
-    const d = data.filter((da) => da.title.toLowerCase().includes(kye));
+    setTimeout(() => {
+      const d = data.filter((da) => da.title.toLowerCase().includes(kye));
 
-    console.log(d);
-    console.log(d.length);
+      console.log(d);
+      console.log(d.length);
 
-    SetValue(d);
+      SetValue(d);
 
-    if (d.length == 0) {
-      console.log("true");
-      // SetValue("data is Not found");
-      SetValue([]);
-    }
+      if (d.length == 0) {
+        console.log("true");
+        // SetValue("data is Not found");
+        SetValue([]);
+      }
+
+      setLoding(false);
+    }, 500);
   };
 
   // console.log(value);
@@ -51,7 +59,9 @@ const AllApplications = () => {
         </div>
       </div>
       <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-5">
-        {value.length != 0 ? (
+        {loding ? (
+          <span className="loading loading-infinity loading-xl w-50"></span>
+        ) : value.length != 0 ? (
           value.map((data) => (
             <AllApplicationData data={data}></AllApplicationData>
           ))
