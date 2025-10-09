@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { addData } from "./utility/LS";
 import { ToastContainer, toast } from "react-toastify";
+import AppNotFoundError from "./AppNotFoundError";
 
 const AboutApp = () => {
   const data = useLoaderData();
@@ -12,9 +13,20 @@ const AboutApp = () => {
 
   //console.log(id);
 
-  const findData = data.find((data) => id == data.id); //the data
+  //the data
 
-  //console.log(findData);
+  const [found, setFound] = useState(false);
+
+  useEffect(() => {
+    const findData = data.find((data) => id == data.id);
+
+    if (findData) {
+      console.log("true");
+    } else {
+      console.log("un");
+      setFound(true);
+    }
+  }, []);
 
   const [state, SetState] = useState();
 
@@ -56,32 +68,36 @@ const AboutApp = () => {
 
   return (
     <div>
-      <div className="hero bg-base-200 min-h-screen">
-        <div className="hero-content flex-col lg:flex-row">
-          <img
-            src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-            className="max-w-sm rounded-lg shadow-2xl"
-          />
-          <div>
-            <h1 className="text-5xl font-bold">Box Office News!</h1>
-            <p className="py-6">
-              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
-              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
-              et a id nisi.
-            </p>
-            <button
-              onClick={() => {
-                LS(id);
-                notify();
-              }}
-              className={state ? "btn btn-primary" : "disabled"}
-            >
-              {state ? "Install Now the game" : "Installed"}
-            </button>
-            <ToastContainer />
+      {found ? (
+        <AppNotFoundError></AppNotFoundError>
+      ) : (
+        <div className="hero bg-base-200 min-h-screen">
+          <div className="hero-content flex-col lg:flex-row">
+            <img
+              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
+              className="max-w-sm rounded-lg shadow-2xl"
+            />
+            <div>
+              <h1 className="text-5xl font-bold">Box Office News!</h1>
+              <p className="py-6">
+                Provident cupiditate voluptatem et in. Quaerat fugiat ut
+                assumenda excepturi exercitationem quasi. In deleniti eaque aut
+                repudiandae et a id nisi.
+              </p>
+              <button
+                onClick={() => {
+                  LS(id);
+                  notify();
+                }}
+                className={state ? "btn btn-primary" : "disabled"}
+              >
+                {state ? "Install Now the game" : "Installed"}
+              </button>
+              <ToastContainer />
+            </div>
           </div>
         </div>
-      </div>
+      )}
     </div>
   );
 };

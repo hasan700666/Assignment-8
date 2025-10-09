@@ -5,8 +5,6 @@ import Error from "../compunent/Error";
 import AllApplications from "../compunent/Page/AllApplications";
 import Installation from "../compunent/Page/Installation";
 import AboutApp from "../compunent/AboutApp";
-import { Suspense } from "react";
-import AllApplicationData from "../compunent/AllApplicationData";
 
 async function TopAppDataLoader() {
   const data = await fetch("TopAppData.json");
