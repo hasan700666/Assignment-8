@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router";
 import { addData } from "./utility/LS";
+import { ToastContainer, toast } from "react-toastify";
 
 const AboutApp = () => {
   const data = useLoaderData();
@@ -51,7 +52,7 @@ const AboutApp = () => {
     }
   };
 
-  console.log(state);
+  const notify = () => toast("added into install page");
 
   return (
     <div>
@@ -69,11 +70,15 @@ const AboutApp = () => {
               et a id nisi.
             </p>
             <button
-              onClick={() => LS(id)}
+              onClick={() => {
+                LS(id);
+                notify();
+              }}
               className={state ? "btn btn-primary" : "disabled"}
             >
-              Install Now the game
+              {state ? "Install Now the game" : "Installed"}
             </button>
+            <ToastContainer />
           </div>
         </div>
       </div>

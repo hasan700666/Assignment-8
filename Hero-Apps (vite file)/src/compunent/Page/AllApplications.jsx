@@ -1,11 +1,35 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router";
 import AllApplicationData from "../AllApplicationData";
+import AppNotFound from "../AppNotFound";
 
 const AllApplications = () => {
   const data = useLoaderData();
 
-  console.log(data);
+  const [value, SetValue] = useState(data);
+
+  //console.log(data);
+
+  const hendleChange = (e) => {
+    const kye = e.target.value.toLowerCase();
+
+    const d = data.filter((da) => da.title.toLowerCase().includes(kye));
+
+    console.log(d);
+    console.log(d.length);
+
+    SetValue(d);
+
+    if (d.length == 0) {
+      console.log("true");
+      // SetValue("data is Not found");
+      SetValue([]);
+    }
+  };
+
+  // console.log(value);
+  // console.log(value === false);
+  console.log(value.length);
 
   return (
     <div>
@@ -15,10 +39,25 @@ const AllApplications = () => {
       <div className="text-2xl text-center my-5">
         Explore All Apps on the Market developed by us. We code for Millions
       </div>
+      <div className="flex justify-between m-10">
+        <div>All App </div>
+        <div>
+          <input
+            type="text"
+            placeholder=" Search"
+            className="border border-black"
+            onChange={hendleChange}
+          />
+        </div>
+      </div>
       <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-5">
-        {data.map((data) => (
-          <AllApplicationData data={data}></AllApplicationData>
-        ))}
+        {value.length != 0 ? (
+          value.map((data) => (
+            <AllApplicationData data={data}></AllApplicationData>
+          ))
+        ) : (
+          <AppNotFound></AppNotFound>
+        )}
       </div>
     </div>
   );
