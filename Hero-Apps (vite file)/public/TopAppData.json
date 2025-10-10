@@ -1,28 +1,28 @@
 [
-  {
-    "image": "https://example.com/images/app1.png",
-    "title": "TaskFlow",
-    "companyName": "ZenSoft Ltd",
+   {
+    "image": "https://content.easy.jobs/assets/112460/company_logo.png",
+    "title": "Programming Hero",
+    "companyName": "Programming Hero",
     "id": 1,
-    "description": "Boost your productivity with smart task organization and daily reminders.",
+    "description": "“Programming Hero is designed for aspiring developers of all ages. With interactive lessons, gamified challenges, and real-world projects, it helps learners turn complex programming concepts into practical skills. From building your first website to creating mobile apps and games, Programming Hero makes coding exciting and accessible. Join the community of learners and start your journey to becoming a coding hero today!”",
     "size": 35,
     "reviews": 1280,
-    "ratingAvg": 4.5,
+    "ratingAvg": 4.9,
     "downloads": 50000,
     "ratings": [
-      { "name": "1 star", "count": 50 },
-      { "name": "2 star", "count": 90 },
-      { "name": "3 star", "count": 180 },
-      { "name": "4 star", "count": 400 },
-      { "name": "5 star", "count": 560 }
+      { "name": "1 star", "count": 0 },
+      { "name": "2 star", "count": 0 },
+      { "name": "3 star", "count": 0 },
+      { "name": "4 star", "count": 1000 },
+      { "name": "5 star", "count": 1234}
     ]
   },
   {
-    "image": "https://example.com/images/app2.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/733/733547.png",
     "title": "FitTrack Pro",
     "companyName": "Healthify Co",
     "id": 2,
-    "description": "Track workouts, diet, and sleep patterns all in one app.",
+    "description": "FitTrack Pro allows you to monitor your fitness progress with detailed workout tracking, calorie analysis, and personalized nutrition plans. It includes daily motivation goals, community challenges, and AI-based suggestions to keep you on track toward your health journey.",
     "size": 42,
     "reviews": 2390,
     "ratingAvg": 4.2,
@@ -36,11 +36,11 @@
     ]
   },
   {
-    "image": "https://example.com/images/app3.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/733/733558.png",
     "title": "NoteWise",
     "companyName": "EduTools Inc",
     "id": 3,
-    "description": "A simple and elegant note-taking app for students and professionals.",
+    "description": "NoteWise is your digital notebook designed for students, writers, and thinkers. You can organize notes, add images, voice memos, and sync everything across all devices. It also includes AI-based keyword search for faster access to your stored ideas.",
     "size": 18,
     "reviews": 850,
     "ratingAvg": 4.7,
@@ -54,11 +54,11 @@
     ]
   },
   {
-    "image": "https://example.com/images/app4.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/733/733579.png",
     "title": "PhotoSpark",
     "companyName": "Lensify Studio",
     "id": 4,
-    "description": "Edit and enhance photos with AI-powered filters and effects.",
+    "description": "PhotoSpark brings professional photo editing to your fingertips. With AI-powered filters, one-tap background removal, and smart enhancement, you can turn any picture into a masterpiece. Perfect for influencers, designers, and photography enthusiasts.",
     "size": 57,
     "reviews": 3500,
     "ratingAvg": 4.4,
@@ -72,11 +72,11 @@
     ]
   },
   {
-    "image": "https://example.com/images/app5.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/1384/1384060.png",
     "title": "MindEase",
     "companyName": "Relaxify Labs",
     "id": 5,
-    "description": "Guided meditations, breathing exercises, and mood tracking tools.",
+    "description": "MindEase offers guided meditation, mood tracking, and personalized relaxation sessions to help you reduce anxiety and improve sleep quality. Its calm interface and science-backed programs make it a trusted choice for mental wellness.",
     "size": 28,
     "reviews": 1950,
     "ratingAvg": 4.8,
@@ -90,11 +90,11 @@
     ]
   },
   {
-    "image": "https://example.com/images/app6.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/174/174872.png",
     "title": "BudgetMate",
     "companyName": "Finovate",
     "id": 6,
-    "description": "Track income and expenses easily with smart analytics.",
+    "description": "BudgetMate helps users manage their finances effortlessly. Set your monthly goals, categorize expenses, and visualize your savings progress with interactive charts. Securely link bank accounts to automate spending insights.",
     "size": 25,
     "reviews": 1120,
     "ratingAvg": 4.1,
@@ -108,11 +108,11 @@
     ]
   },
   {
-    "image": "https://example.com/images/app7.png",
+    "image": "https://t4.ftcdn.net/jpg/03/23/62/87/360_F_323628780_xo9IAZJluOApdsip7CTrcMiml3qGM5OA.jpg",
     "title": "GameHub Arena",
     "companyName": "NextGen Games",
     "id": 7,
-    "description": "Discover, play, and share trending mobile games with friends.",
+    "description": "GameHub Arena lets you discover and play trending mobile games with your friends. Earn rewards, climb leaderboards, and chat in live rooms while competing in tournaments. The perfect hub for all casual and hardcore gamers.",
     "size": 80,
     "reviews": 5000,
     "ratingAvg": 4.3,
@@ -126,11 +126,11 @@
     ]
   },
   {
-    "image": "https://example.com/images/app8.png",
+    "image": "https://cdn-icons-png.flaticon.com/512/5968/5968534.png",
     "title": "LangBoost",
     "companyName": "PolyLingua",
     "id": 8,
-    "description": "Learn new languages interactively with games, quizzes, and chatbots.",
+    "description": "LangBoost is a fun and interactive app for learning new languages. It includes games, quizzes, and conversation practice with AI-powered chatbots. Track progress and improve fluency with real-time pronunciation feedback.",
     "size": 40,
     "reviews": 3100,
     "ratingAvg": 4.6,
@@ -141,6 +141,42 @@
       { "name": "3 star", "count": 300 },
       { "name": "4 star", "count": 900 },
       { "name": "5 star", "count": 1600 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/3046/3046121.png",
+    "title": "WeatherCast",
+    "companyName": "SkyTech Labs",
+    "id": 9,
+    "description": "WeatherCast provides ultra-accurate weather forecasts with live radar and storm tracking. It also includes widgets, severe weather alerts, and climate insights powered by advanced meteorological data.",
+    "size": 30,
+    "reviews": 2100,
+    "ratingAvg": 4.4,
+    "downloads": 150000,
+    "ratings": [
+      { "name": "1 star", "count": 100 },
+      { "name": "2 star", "count": 150 },
+      { "name": "3 star", "count": 300 },
+      { "name": "4 star", "count": 700 },
+      { "name": "5 star", "count": 850 }
+    ]
+  },
+  {
+    "image": "https://cdn-icons-png.flaticon.com/512/2111/2111646.png",
+    "title": "StudySync",
+    "companyName": "Brainify Edu",
+    "id": 10,
+    "description": "StudySync lets you organize study materials, track progress, and collaborate with peers in shared workspaces. AI-powered flashcards and progress analytics help students retain information effectively.",
+    "size": 33,
+    "reviews": 1500,
+    "ratingAvg": 4.7,
+    "downloads": 120000,
+    "ratings": [
+      { "name": "1 star", "count": 60 },
+      { "name": "2 star", "count": 80 },
+      { "name": "3 star", "count": 150 },
+      { "name": "4 star", "count": 400 },
+      { "name": "5 star", "count": 810 }
     ]
   }
 ]

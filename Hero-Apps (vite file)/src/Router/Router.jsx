@@ -7,13 +7,13 @@ import Installation from "../compunent/Page/Installation";
 import AboutApp from "../compunent/AboutApp";
 
 async function TopAppDataLoader() {
-  const data = await fetch("TopAppData.json");
+  const data = await fetch("/TopAppData.json");
   const dataJSON = await data.json();
   return dataJSON;
 }
 
 async function AllAppDataLoader() {
-  const fachData = await fetch("AllAppData.json");
+  const fachData = await fetch("/AllAppData.json");
   const JSONdata = await fachData.json();
   return JSONdata;
 }
@@ -37,17 +37,17 @@ export const router = createBrowserRouter([
       },
       {
         path: "Installation",
-        loader: () => fetch("../../public/AllAppData.json"),
+        loader: () => fetch("/AllAppData.json"),
         Component: Installation,
       },
       {
         path: "about/:id",
-        loader: () => fetch("../../public/AllAppData.json"),
+        loader: () => fetch("/AllAppData.json"),
         Component: AboutApp,
       },
       {
         path: "AllApplication/about/:id",
-        loader: () => fetch("../../public/AllAppData.json"),
+        loader: () => fetch("/AllAppData.json"),
         Component: AboutApp,
       },
     ],

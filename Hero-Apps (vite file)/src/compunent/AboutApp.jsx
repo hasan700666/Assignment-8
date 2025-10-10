@@ -3,10 +3,10 @@ import { useLoaderData, useParams } from "react-router";
 import { addData } from "./utility/LS";
 import { ToastContainer, toast } from "react-toastify";
 import AppNotFoundError from "./AppNotFoundError";
-import IMG from "../assets/demo-app (1).webp";
 import { MdDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 import { AiTwotoneLike } from "react-icons/ai";
+import Barchat from "./Barchat";
 
 const AboutApp = () => {
   const data = useLoaderData();
@@ -82,7 +82,10 @@ const AboutApp = () => {
           <div className="">
             <div className="hero-content flex-col lg:flex-row justify-start">
               <div>
-                <img src={IMG} className="w-100 rounded-lg shadow-2xl mx-20" />
+                <img
+                  src={app?.image}
+                  className="w-100 rounded-lg shadow-2xl mx-20"
+                />
               </div>
               <div className="flex flex-col justify-center items-center lg:block">
                 <h1 className="text-5xl font-bold">{app?.title}</h1>
@@ -90,7 +93,7 @@ const AboutApp = () => {
                   <span>Developed by </span>
                   {app?.companyName}
                 </p>
-                <div className="flex justify-center gap-5">
+                <div className="flex gap-5">
                   <p className="">
                     <span>
                       <MdDownload /> Downloads <br /> {app?.downloads}
@@ -120,8 +123,11 @@ const AboutApp = () => {
               </div>
             </div>
           </div>
-          <div>
-            <div>gujfjgjk</div>
+          <div className="m-10">
+            <div className="font-bold my-3">Ratings</div>
+            <div className="">
+              <Barchat data={app?.ratings}></Barchat>
+            </div>
           </div>
           <div className="m-10">
             <div className="font-bold my-3">Description</div>

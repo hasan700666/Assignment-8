@@ -1,5 +1,4 @@
 import React from "react";
-import IMG from "../assets/demo-app (1).webp";
 import { NavLink } from "react-router";
 
 const AllApplicationData = ({ data }) => {
@@ -12,7 +11,7 @@ const AllApplicationData = ({ data }) => {
       <div>
         <div className="card bg-base-100 w-96 shadow-sm">
           <figure>
-            <img src={IMG} />
+            <img src={data.image} />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{data.title}</h2>

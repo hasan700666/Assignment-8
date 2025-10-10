@@ -2,6 +2,8 @@ import React from "react";
 import IMG from "../assets/demo-app (1).webp";
 import { removeItem } from "./utility/LS";
 import { ToastContainer, toast } from "react-toastify";
+import { MdDownload } from "react-icons/md";
+import { FaStar } from "react-icons/fa";
 
 const InstallationApp = ({ data }) => {
   const Data = data;
@@ -27,12 +29,24 @@ const InstallationApp = ({ data }) => {
       <div id={Data.id}>
         <div className="flex justify-between gap-7 py-5 mx-10 items-center">
           <div className="flex items-center">
-            <div className="mx-9">{IMG}</div>
+            <div className="mx-5">
+              <img src={data.image} alt="" className="w-10" />
+            </div>
             <div>
               <div>{Data.title}</div>
               <div className="flex justify-center items-center gap-15">
-                <div>{Data.downloads}</div>
-                <div>{Data.ratingAvg}</div>
+                <div>
+                  <p className="flex items-center gap-1">
+                    <MdDownload />
+                    {Data.downloads}
+                  </p>
+                </div>
+                <div>
+                  <p className="flex items-center gap-1">
+                    <MdDownload />
+                    {Data.ratingAvg}
+                  </p>
+                </div>
               </div>
             </div>
           </div>

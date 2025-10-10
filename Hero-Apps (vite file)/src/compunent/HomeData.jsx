@@ -12,7 +12,7 @@ const HomeData = ({ data }) => {
       <div className="flex justify-center">
         <div className="card bg-base-100 w-96 shadow-sm">
           <figure>
-            <img src={IMG} />
+            <img src={data.image} />
           </figure>
           <div className="card-body">
             <h2 className="card-title">{data.title}</h2>
