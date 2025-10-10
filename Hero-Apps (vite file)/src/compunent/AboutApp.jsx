@@ -117,7 +117,7 @@ const AboutApp = () => {
                   }}
                   className={state ? "btn btn-primary my-7" : "disabled my-7"}
                 >
-                  {state ? "Install Now the game" : "Installed"}
+                  {state ? "Install Now" : "Installed"}
                 </button>
                 <ToastContainer />
               </div>

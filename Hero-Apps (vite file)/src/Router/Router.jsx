@@ -1,4 +1,4 @@
-import { createBrowserRouter, useLoaderData } from "react-router";
+import { createBrowserRouter } from "react-router";
 import Home from "../compunent/Page/Home";
 import Root from "../Root/Root";
 import Error from "../compunent/Error";
@@ -22,7 +22,6 @@ export const router = createBrowserRouter([
   {
     path: "/",
     Component: Root,
-    errorElement: <Error></Error>,
     children: [
       {
         index: true,
@@ -49,6 +48,10 @@ export const router = createBrowserRouter([
         path: "AllApplication/about/:id",
         loader: () => fetch("/AllAppData.json"),
         Component: AboutApp,
+      },
+      {
+        path: "*",
+        Component: Error,
       },
     ],
   },
