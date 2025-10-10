@@ -41,14 +41,16 @@ const AllApplications = () => {
 
   return (
     <div>
-      <div className="text-5xl font-bold text-center my-5">
-        Our All Applications
-      </div>
-      <div className="text-2xl text-center my-5">
-        Explore All Apps on the Market developed by us. We code for Millions
+      <div className="my-20">
+        <div className="text-5xl font-bold text-center my-5">
+          Our All Applications
+        </div>
+        <div className="text-2xl text-center my-5">
+          Explore All Apps on the Market developed by us. We code for Millions
+        </div>
       </div>
       <div className="flex justify-between m-10">
-        <div>All App </div>
+        <div>All App {value.length}</div>
         <div>
           <input
             type="text"
@@ -58,13 +60,17 @@ const AllApplications = () => {
           />
         </div>
       </div>
-      <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-5">
+      <div>
         {loding ? (
-          <span className="loading loading-infinity loading-xl w-50"></span>
+          <div className="flex justify-center">
+            <span className="loading loading-infinity loading-xl w-50"></span>
+          </div>
         ) : value.length != 0 ? (
-          value.map((data) => (
-            <AllApplicationData data={data}></AllApplicationData>
-          ))
+          <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-5">
+            {value.map((data) => (
+              <AllApplicationData data={data}></AllApplicationData>
+            ))}
+          </div>
         ) : (
           <AppNotFound></AppNotFound>
         )}

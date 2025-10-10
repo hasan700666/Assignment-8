@@ -3,6 +3,10 @@ import { useLoaderData, useParams } from "react-router";
 import { addData } from "./utility/LS";
 import { ToastContainer, toast } from "react-toastify";
 import AppNotFoundError from "./AppNotFoundError";
+import IMG from "../assets/demo-app (1).webp";
+import { MdDownload } from "react-icons/md";
+import { FaStar } from "react-icons/fa";
+import { AiTwotoneLike } from "react-icons/ai";
 
 const AboutApp = () => {
   const data = useLoaderData();
@@ -15,6 +19,8 @@ const AboutApp = () => {
 
   //the data
 
+  const [app, setApp] = useState(null);
+
   const [found, setFound] = useState(false);
 
   useEffect(() => {
@@ -22,11 +28,12 @@ const AboutApp = () => {
 
     if (findData) {
       console.log("true");
+      setApp(findData);
     } else {
       console.log("un");
       setFound(true);
     }
-  }, []);
+  }, [data, id]);
 
   const [state, SetState] = useState();
 
@@ -71,30 +78,54 @@ const AboutApp = () => {
       {found ? (
         <AppNotFoundError></AppNotFoundError>
       ) : (
-        <div className="hero bg-base-200 min-h-screen">
-          <div className="hero-content flex-col lg:flex-row">
-            <img
-              src="https://img.daisyui.com/images/stock/photo-1635805737707-575885ab0820.webp"
-              className="max-w-sm rounded-lg shadow-2xl"
-            />
-            <div>
-              <h1 className="text-5xl font-bold">Box Office News!</h1>
-              <p className="py-6">
-                Provident cupiditate voluptatem et in. Quaerat fugiat ut
-                assumenda excepturi exercitationem quasi. In deleniti eaque aut
-                repudiandae et a id nisi.
-              </p>
-              <button
-                onClick={() => {
-                  LS(id);
-                  notify();
-                }}
-                className={state ? "btn btn-primary" : "disabled"}
-              >
-                {state ? "Install Now the game" : "Installed"}
-              </button>
-              <ToastContainer />
+        <div>
+          <div className="">
+            <div className="hero-content flex-col lg:flex-row justify-start">
+              <div>
+                <img src={IMG} className="w-100 rounded-lg shadow-2xl mx-20" />
+              </div>
+              <div className="flex flex-col justify-center items-center lg:block">
+                <h1 className="text-5xl font-bold">{app?.title}</h1>
+                <p className="py-5 pb-20">
+                  <span>Developed by </span>
+                  {app?.companyName}
+                </p>
+                <div className="flex justify-center gap-5">
+                  <p className="">
+                    <span>
+                      <MdDownload /> Downloads <br /> {app?.downloads}
+                    </span>
+                  </p>
+                  <p className="">
+                    <span>
+                      <FaStar /> Average Ratings <br /> {app?.ratingAvg}
+                    </span>
+                  </p>
+                  <p className="">
+                    <span>
+                      <AiTwotoneLike /> Total Reviews <br /> {app?.reviews}
+                    </span>
+                  </p>
+                </div>
+                <button
+                  onClick={() => {
+                    LS(id);
+                    notify();
+                  }}
+                  className={state ? "btn btn-primary my-7" : "disabled my-7"}
+                >
+                  {state ? "Install Now the game" : "Installed"}
+                </button>
+                <ToastContainer />
+              </div>
             </div>
+          </div>
+          <div>
+            <div>gujfjgjk</div>
+          </div>
+          <div className="m-10">
+            <div className="font-bold my-3">Description</div>
+            <div>{app?.description}</div>
           </div>
         </div>
       )}
