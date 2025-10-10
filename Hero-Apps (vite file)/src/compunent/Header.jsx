@@ -1,6 +1,7 @@
 import React from "react";
 import logo from "../assets/logo.png";
 import { NavLink } from "react-router";
+import "../CSS file/css.css";
 
 const Header = () => {
   const list = (
@@ -46,16 +47,23 @@ const Header = () => {
               {list}
             </ul>
           </div>
-          <div className="flex justify-center items-center mx-5">
-            <img className="w-8" src={logo} alt="" />
-            <a className="btn btn-ghost text-xl">HERO.IO</a>
-          </div>
+          <NavLink to="/">
+            <div className="flex justify-center items-center mx-5">
+              <img className="w-8" src={logo} alt="" />
+              <a className="btn btn-ghost text-xl">HERO.IO</a>
+            </div>
+          </NavLink>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{list}</ul>
+          <ul id="under" className="menu menu-horizontal px-1">
+            {list}
+          </ul>
         </div>
         <div className="navbar-end mx-5">
-          <a className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] font-bold text-neutral-50">
+          <a
+            className="btn bg-gradient-to-r from-[#632EE3] to-[#9F62F2] font-bold text-neutral-50"
+            href="https://github.com/hasan700666"
+          >
             Contribute
           </a>
         </div>
