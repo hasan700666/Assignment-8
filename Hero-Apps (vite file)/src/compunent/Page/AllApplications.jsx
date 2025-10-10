@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { useState } from "react";
 import { useLoaderData } from "react-router";
 import AllApplicationData from "../AllApplicationData";
 import AppNotFound from "../AppNotFound";

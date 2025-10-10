@@ -37,7 +37,7 @@ const Home = () => {
       <div className="flex justify-center items-center">
         <img src={MovileIMG} alt="" />
       </div>
-      <div className="my-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-neutral-50">
+      <div className="mb-10 bg-gradient-to-r from-[#632EE3] to-[#9F62F2] text-neutral-50">
         <div className="text-3xl text-center py-7">
           Trusted by Millions, Built for You
         </div>

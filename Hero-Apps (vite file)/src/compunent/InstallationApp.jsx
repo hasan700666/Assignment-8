@@ -1,5 +1,4 @@
 import React from "react";
-import IMG from "../assets/demo-app (1).webp";
 import { removeItem } from "./utility/LS";
 import { MdDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
