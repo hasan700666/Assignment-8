@@ -1,11 +1,10 @@
 import React from "react";
 import IMG from "../assets/demo-app (1).webp";
 import { removeItem } from "./utility/LS";
-import { ToastContainer, toast } from "react-toastify";
 import { MdDownload } from "react-icons/md";
 import { FaStar } from "react-icons/fa";
 
-const InstallationApp = ({ data }) => {
+const InstallationApp = ({ data, notify }) => {
   const Data = data;
 
   console.log(Data);
@@ -21,8 +20,6 @@ const InstallationApp = ({ data }) => {
     INTcopy_number = INTcopy_number - 1;
     copy_number_text.innerText = INTcopy_number;
   }
-
-  const notify = () => toast("uninstalled");
 
   return (
     <div>
@@ -43,7 +40,7 @@ const InstallationApp = ({ data }) => {
                 </div>
                 <div>
                   <p className="flex items-center gap-1">
-                    <MdDownload />
+                    <FaStar />
                     {Data.ratingAvg}
                   </p>
                 </div>
@@ -60,7 +57,6 @@ const InstallationApp = ({ data }) => {
             >
               Uninstall
             </div>
-            <ToastContainer />
           </div>
         </div>
       </div>

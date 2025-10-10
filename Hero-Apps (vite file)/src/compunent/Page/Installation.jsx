@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import { gatAllData } from "../utility/LS";
 import InstallationApp from "../InstallationApp";
+import { ToastContainer, toast } from "react-toastify";
 
 const Installation = () => {
   const data = useLoaderData();
@@ -29,6 +30,9 @@ const Installation = () => {
     const data = [...InstalldList].sort((a, b) => a.downloads - b.downloads);
     SetInstalldList(data);
   };
+
+  const notify = () => toast("uninstalled");
+
   return (
     <div>
       <div className="text-5xl font-bold text-center my-5">
@@ -42,7 +46,7 @@ const Installation = () => {
           <span id="AppNumber">{InstalldList.length}</span> Apps Found
         </p>
         <div className="dropdown dropdown-end">
-          <div tabIndex={0} role="button" className="btn m-1">
+          <div tabIndex={0} role="button" className="btn m-1 mx-10">
             sort by⬇️
           </div>
           <ul
@@ -60,9 +64,10 @@ const Installation = () => {
       </div>
       <div>
         {InstalldList.map((data) => (
-          <InstallationApp data={data}></InstallationApp>
+          <InstallationApp data={data} notify={notify}></InstallationApp>
         ))}
       </div>
+      <ToastContainer />
     </div>
   );
 };
