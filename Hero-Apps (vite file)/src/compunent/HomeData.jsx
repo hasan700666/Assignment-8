@@ -9,7 +9,7 @@ const HomeData = ({ data }) => {
 
   return (
     <NavLink to={`about/${data.id}`}>
-      <div>
+      <div className="flex justify-center">
         <div className="card bg-base-100 w-96 shadow-sm">
           <figure>
             <img src={IMG} />

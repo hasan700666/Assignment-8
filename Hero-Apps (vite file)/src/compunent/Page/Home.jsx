@@ -1,6 +1,6 @@
 import React from "react";
 import MovileIMG from "../../assets/hero.png";
-import { useLoaderData } from "react-router";
+import { NavLink, useLoaderData } from "react-router";
 import HomeData from "../HomeData";
 
 const Home = () => {
@@ -24,8 +24,15 @@ const Home = () => {
         an impact.
       </div>
       <div className="flex justify-center items-center gap-6 mb-30">
-        <button className="btn">Google Play</button>
-        <button className="btn">App Store</button>
+        <a
+          className="btn"
+          href="https://play.google.com/store/games?device=windows"
+        >
+          Google Play
+        </a>
+        <a href="https://www.apple.com/app-store/" className="btn">
+          App Store
+        </a>
       </div>
       <div className="flex justify-center items-center">
         <img src={MovileIMG} alt="" />
@@ -65,6 +72,11 @@ const Home = () => {
           {data.map((data) => (
             <HomeData data={data}></HomeData>
           ))}
+        </div>
+        <div className="flex justify-center">
+          <NavLink to="AllApplication">
+            <div className="btn m-10 text-center">Show All</div>
+          </NavLink>
         </div>
       </div>
     </div>
