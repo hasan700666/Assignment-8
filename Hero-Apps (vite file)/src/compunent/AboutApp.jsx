@@ -3,10 +3,10 @@ import { useLoaderData, useParams } from "react-router";
 import { addData } from "./utility/LS";
 import { ToastContainer, toast } from "react-toastify";
 import AppNotFoundError from "./AppNotFoundError";
-import { MdDownload } from "react-icons/md";
-import { FaStar } from "react-icons/fa";
-import { AiTwotoneLike } from "react-icons/ai";
 import Barchat from "./Barchat";
+import download from "../assets/icon-downloads.png";
+import star from "../assets/icon-review.png";
+import like from "../assets/icon-ratings.png";
 
 const AboutApp = () => {
   const data = useLoaderData();
@@ -90,25 +90,28 @@ const AboutApp = () => {
               <div className="flex flex-col justify-center items-center lg:block">
                 <h1 className="text-5xl font-bold">{app?.title}</h1>
                 <p className="py-5 pb-20">
-                  <span>Developed by </span>
+                  <span className="font-bold">Developed by </span>
                   {app?.companyName}
                 </p>
-                <div className="flex gap-5">
-                  <p className="">
-                    <span>
-                      <MdDownload /> Downloads <br /> {app?.downloads}
-                    </span>
-                  </p>
-                  <p className="">
-                    <span>
-                      <FaStar /> Average Ratings <br /> {app?.ratingAvg}
-                    </span>
-                  </p>
-                  <p className="">
-                    <span>
-                      <AiTwotoneLike /> Total Reviews <br /> {app?.reviews}
-                    </span>
-                  </p>
+                <div className="flex gap-10">
+                  <div className="flex gap-5 justify-center items-center">
+                    <img src={download} alt="" className="h-10" />
+                    <div>
+                      Downloads <br /> {app?.downloads}
+                    </div>
+                  </div>
+                  <div className="flex gap-5 justify-center items-center">
+                    <img src={star} alt="" className="h-10" />
+                    <div>
+                      Average Ratings <br /> {app?.ratingAvg}
+                    </div>
+                  </div>
+                  <div className="flex gap-5 justify-center items-center">
+                    <img src={like} alt="" className="h-10" />
+                    <div>
+                      Total Reviews <br /> {app?.reviews}
+                    </div>
+                  </div>
                 </div>
                 <button
                   onClick={() => {

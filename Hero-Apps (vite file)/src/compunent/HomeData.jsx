@@ -1,5 +1,4 @@
 import React from "react";
-import IMG from "../assets/demo-app (1).webp";
 import { NavLink } from "react-router";
 
 const HomeData = ({ data }) => {
@@ -10,8 +9,8 @@ const HomeData = ({ data }) => {
   return (
     <NavLink to={`about/${data.id}`}>
       <div className="flex justify-center">
-        <div className="card bg-base-100 w-96 shadow-sm">
-          <figure>
+        <div className="card bg-base-100 w-80 shadow-sm">
+          <figure className="h-100">
             <img src={data.image} />
           </figure>
           <div className="card-body">

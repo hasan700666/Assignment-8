@@ -142,41 +142,5 @@
       { "name": "4 star", "count": 900 },
       { "name": "5 star", "count": 1600 }
     ]
-  },
-  {
-    "image": "https://cdn-icons-png.flaticon.com/512/3046/3046121.png",
-    "title": "WeatherCast",
-    "companyName": "SkyTech Labs",
-    "id": 9,
-    "description": "WeatherCast provides ultra-accurate weather forecasts with live radar and storm tracking. It also includes widgets, severe weather alerts, and climate insights powered by advanced meteorological data.",
-    "size": 30,
-    "reviews": 2100,
-    "ratingAvg": 4.4,
-    "downloads": 150000,
-    "ratings": [
-      { "name": "1 star", "count": 100 },
-      { "name": "2 star", "count": 150 },
-      { "name": "3 star", "count": 300 },
-      { "name": "4 star", "count": 700 },
-      { "name": "5 star", "count": 850 }
-    ]
-  },
-  {
-    "image": "https://cdn-icons-png.flaticon.com/512/2111/2111646.png",
-    "title": "StudySync",
-    "companyName": "Brainify Edu",
-    "id": 10,
-    "description": "StudySync lets you organize study materials, track progress, and collaborate with peers in shared workspaces. AI-powered flashcards and progress analytics help students retain information effectively.",
-    "size": 33,
-    "reviews": 1500,
-    "ratingAvg": 4.7,
-    "downloads": 120000,
-    "ratings": [
-      { "name": "1 star", "count": 60 },
-      { "name": "2 star", "count": 80 },
-      { "name": "3 star", "count": 150 },
-      { "name": "4 star", "count": 400 },
-      { "name": "5 star", "count": 810 }
-    ]
   }
 ]

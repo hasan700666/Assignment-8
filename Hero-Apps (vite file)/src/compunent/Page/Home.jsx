@@ -68,7 +68,7 @@ const Home = () => {
         <div className="text-2xl text-center my-5">
           Explore All Trending Apps on the Market developed by us
         </div>
-        <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-5">
+        <div className="lg:grid md:grid sm:grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 flex flex-col justify-center items-center gap-10">
           {data.map((data) => (
             <HomeData data={data}></HomeData>
           ))}
