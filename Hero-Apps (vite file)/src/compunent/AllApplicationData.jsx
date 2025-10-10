@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router";
+import { MdDownload } from "react-icons/md";
+import { FaStar } from "react-icons/fa";
 
 const AllApplicationData = ({ data }) => {
   const comeData = data;
@@ -16,8 +18,14 @@ const AllApplicationData = ({ data }) => {
           <div className="card-body">
             <h2 className="card-title">{data.title}</h2>
             <div className="card-actions justify-between">
-              <div className="badge badge-outline">{data.downloads}</div>
-              <div className="badge badge-outline">{data.ratingAvg}</div>
+              <div className="badge badge-outline">
+                <MdDownload />
+                {data.downloads}
+              </div>
+              <div className="badge badge-outline">
+                <FaStar />
+                {data.ratingAvg}
+              </div>
             </div>
           </div>
         </div>
