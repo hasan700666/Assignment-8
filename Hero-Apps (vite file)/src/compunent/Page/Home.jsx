@@ -42,19 +42,19 @@ const Home = () => {
           Trusted by Millions, Built for You
         </div>
         <div className="flex justify-center ">
-          <div className="stats shadow gap-20 pb-7 text-neutral-50">
-            <div className="flex flex-col justify-center items-center">
+          <div className="md:stats shadow md:gap-20 md:pb-7 text-neutral-50 flex justify-center flex-col">
+            <div className="flex flex-col justify-center items-center my-5 md:my-0">
               <div className="">Total Downloads</div>
               <div className="stat-value ">29.6M</div>
               <div className="">21% more than last month</div>
             </div>
 
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center my-5 md:my-0">
               <div className="">Total Reviews</div>
               <div className="stat-value ">906K</div>
               <div className="">46% more than last month</div>
             </div>
-            <div className="flex flex-col justify-center items-center">
+            <div className="flex flex-col justify-center items-center my-5 md:my-0">
               <div className="">Active Apps</div>
               <div className="stat-value ">132+</div>
               <div className="">31 more will Launch</div>
