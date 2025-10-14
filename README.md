@@ -19,4 +19,4 @@ HERO.IO
 
 ## Live Link Of Project
 
-`https://bright-alpaca-23aa0a.netlify.app/`
+`https://hero-io-by-mham.netlify.app/`
